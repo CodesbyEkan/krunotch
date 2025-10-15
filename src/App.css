@@ -71,6 +71,10 @@
   font-size: 2.1em;
 }
 
+.offcanvas {
+  min-width: 100vw;
+}
+
 /* {<>} */
 
 .anim-container {
