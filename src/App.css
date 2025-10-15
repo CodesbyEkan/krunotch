@@ -1,0 +1,132 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgb(114, 205, 205);
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+
+.navbar-brand,
+.nav-link,
+.offcanvas-title,
+.nav-link.active {
+  font-weight: 600;
+  color: rgb(8, 60, 60) !important;
+}
+
+.container-fluid .navbar-brand {
+  margin-left: 1em;
+  font-size: 2.1em;
+}
+
+/* {<>} */
+
+.caption {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 22em 4em;
+}
+
+.caption > h1 {
+  font-size: 1.5em;
+  text-align: left;
+  font-weight: 200;
+}
+
+.user {
+  position: relative;
+  display: block;
+  margin: -12px 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 4.45rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 35px rgb(8, 60, 60);
+}
+
+.user::before {
+  position: absolute;
+  content: "";
+  width: 1.2em;
+  height: 0.15em;
+  background-color: rgb(9, 202, 202);
+  z-index: -1;
+  bottom: 20px;
+  left: 3.38em;
+}
+
+.tagline {
+  margin: 12px 0;
+  font-size: 0.845em;
+  line-height: 25px;
+}
+
+#react {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 900;
+  color: rgb(9, 202, 202);
+}
+
+.explore {
+  background-color: rgb(9, 202, 202);
+  color: white;
+  padding: 0.5em 1.6em;
+  border: 2px solid rgb(5, 203, 203);
+  border-radius: 0.3em;
+  font-family: montserrat;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 0 35px rgb(8, 60, 60);
+}
+
+.portfolio,
+.contact {
+  text-transform: uppercase;
+  margin-top: 3em;
+}
+
+/*  LOGIN PAGE DESIGN */
+
+.login-header {
+  margin: 9em 0 1em 0;
+  font-family: Montserrat;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.3em;
+  font-family: Montserrat;
+  text-transform: uppercase;
+}
+
+input {
+  height: 2.6em;
+  width: 60%;
+  padding: 0 1em;
+  /* margin-left: 2em; */
+  margin-bottom: 1.5em;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+button {
+  padding: 0.3em 4em;
+  font-family: Montserrat;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(5, 203, 203);
+}
