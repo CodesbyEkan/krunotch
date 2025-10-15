@@ -75,11 +75,11 @@ export default function Navbar() {
                     CONTACTS
                   </Link>
                 </li>
-                <li class="nav-item">
+                {/* <li class="nav-item">
                   <Link class="nav-link" to="/login">
                     LOG OUT
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
