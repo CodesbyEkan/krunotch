@@ -11,8 +11,8 @@ const Login = () => {
 
   return (
     <>
-      <h1 className="login-header">Login page</h1>
-      <label for="username">Username:</label>
+      <h1 className="login-header">Please, Login</h1>
+      <label htmlFor="username">Username</label>
       <br />
       <input
         type="text"
@@ -21,13 +21,13 @@ const Login = () => {
         onChange={(e) => setValues(e.target.value)}
       />
       <br />
-      <label for="password">Password</label>
+      <label htmlFor="password">Password</label>
       <br />
       <input type="password" name="password" />
       <br />
-      <Link to="/landingpage">
-        <button>Login</button>
-      </Link>
+      <button className="login">
+        <Link to="/landingpage">Login</Link>
+      </button>
     </>
   );
 };

@@ -8,7 +8,6 @@ import Login from "./Login";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <StrictMode>
-      {/* <Login /> */}
       <App />
     </StrictMode>
   </BrowserRouter>

@@ -10,18 +10,20 @@ export default function Navbar() {
       <nav class="navbar fixed-top">
         <div class="container-fluid">
           <Link class="navbar-brand" to="/landingpage">
-            {values}👨🏽‍💻
+            {values}
           </Link>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div className="toggle-outline">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
           <div
             class="offcanvas offcanvas-end"
             tabindex="-1"
@@ -47,7 +49,16 @@ export default function Navbar() {
                     aria-current="page"
                     to="/portfolio"
                   >
-                    ABOUT
+                    PORTFOLIO
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link
+                    class="nav-link active"
+                    aria-current="page"
+                    to="/project"
+                  >
+                    PROJECTS
                   </Link>
                 </li>
                 <li class="nav-item">

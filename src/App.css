@@ -1,11 +1,61 @@
 #root {
+  font-family: "monospace", montserrat, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   margin: 0 auto;
   text-align: center;
 }
 
 .navbar {
-  background-color: rgb(114, 205, 205);
-  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+  position: relative;
+  margin: 0;
+  padding-top: 1.6rem;
+  /* background-color: rgb(114, 205, 205); */
+  /* box-shadow: 0px 0px 8px rgb(0, 0, 0); */
+}
+
+.navbar-toggler {
+  outline: none;
+  border: none;
+}
+
+.toggle-outline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(16, 146, 146);
+  opacity: 0.9;
+  border: 6px solid rgba(16, 146, 146, 0.425);
+  border-radius: 50%;
+  animation: bubble 0.7s ease-in-out 1s infinite alternate;
+}
+
+@keyframes bubble {
+  from {
+    border: 6px solid rgba(0, 0, 0, 0);
+  }
+  to {
+    border: 6px solid rgba(0, 0, 0, 0.425);
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(225, 225, 225)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M7 9h16M4 15h22M7 21h16'/%3e%3c/svg%3e");
+  width: 45px;
+  height: 45px;
+  transform: rotate(135deg);
+  animation: spin-toggle 1.8s ease-out 1s infinite alternate;
+}
+
+@keyframes spin-toggle {
+  0% {
+    transform: rotate(135deg);
+  }
+  25% {
+    transform: rotate(-36deg);
+  }
 }
 
 .navbar-brand,
@@ -13,7 +63,7 @@
 .offcanvas-title,
 .nav-link.active {
   font-weight: 600;
-  color: rgb(8, 60, 60) !important;
+  /* color: rgb(8, 60, 60) !important; */
 }
 
 .container-fluid .navbar-brand {
@@ -23,90 +73,181 @@
 
 /* {<>} */
 
-.caption {
+.anim-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic-animation {
+  position: relative;
+  margin: 3rem auto;
+  height: 288px;
+  width: 288px;
+  border: 3.7px dotted rgb(16, 146, 146);
+  padding: 4rem;
+  border-radius: 50%;
+  animation: profile 5s ease-in-out 1s infinite alternate-reverse;
+}
+
+.profile-pic {
+  background-image: url("./assets/Explore.png");
+  background-size: cover;
+  position: absolute;
+  height: 256px;
+  width: 256px;
+  border: 3px solid rgba(9, 202, 202, 0.753);
+  border-radius: 50%;
+  box-shadow: 0px 0px 12px rgba(9, 202, 202, 0.639);
+}
+
+@keyframes profile {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.intro {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  padding: 22em 4em;
+  align-items: center;
 }
 
-.caption > h1 {
-  font-size: 1.5em;
-  text-align: left;
-  font-weight: 200;
+.typewriter-div {
+  display: flex;
 }
 
-.user {
+.typewriter-div .user {
   position: relative;
-  display: block;
-  margin: -12px 0;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 4.45rem;
-  font-weight: 700;
-  letter-spacing: -2px;
+  margin: 0 auto;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 2.2em;
+  font-weight: bold;
+  line-height: 0.9;
   text-transform: uppercase;
   text-shadow: 0 0 35px rgb(8, 60, 60);
+  border-right: 0.15em solid orange;
+  animation: typing 3.5s steps(30, end) forwards,
+    blink-caret 0.5s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.user::after {
+  position: absolute;
+  content: "";
+  width: 2.2em;
+  height: 0.08em;
+  background-color: rgb(1, 142, 142);
+  z-index: 1;
+  top: -1px;
+  right: 23px;
 }
 
 .user::before {
   position: absolute;
   content: "";
-  width: 1.2em;
-  height: 0.15em;
+  width: 1.4em;
+  height: 0.07em;
   background-color: rgb(9, 202, 202);
-  z-index: -1;
-  bottom: 20px;
-  left: 3.38em;
+  z-index: 1;
+  bottom: -1px;
+  left: 18px;
 }
 
-.tagline {
-  margin: 12px 0;
-  font-size: 0.845em;
+.role {
+  margin: 0;
+  padding-top: 1.3rem;
+  font-size: 1.3em;
+  font-weight: 600;
   line-height: 25px;
 }
 
 #react {
   text-transform: uppercase;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 900;
   color: rgb(9, 202, 202);
 }
 
-.explore {
+#about {
+  padding-top: 0.6rem;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+#line {
+  display: block;
+}
+
+.intro button.explore {
+  margin-top: 0.8em;
+  padding: 0.4em 2.8em;
   background-color: rgb(9, 202, 202);
   color: white;
-  padding: 0.5em 1.6em;
-  border: 2px solid rgb(5, 203, 203);
-  border-radius: 0.3em;
-  font-family: montserrat;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  border-radius: 2em;
+  border: 7px solid rgba(0, 0, 0, 0.425);
+  font-family: "monospace";
   box-shadow: 0 0 35px rgb(8, 60, 60);
+}
+
+.explore a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "monospace";
 }
 
 .portfolio,
 .contact {
   text-transform: uppercase;
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 
 /*  LOGIN PAGE DESIGN */
 
 .login-header {
-  margin: 9em 0 1em 0;
+  margin: 7.7em 0 1em 0;
   font-family: Montserrat;
-  font-size: 2em;
-  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-transform: capitalize;
 }
 
 label {
   display: inline-block;
   margin-bottom: 0.3em;
   font-family: Montserrat;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 1.2rem;
 }
 
 input {
@@ -116,17 +257,23 @@ input {
   /* margin-left: 2em; */
   margin-bottom: 1.5em;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   outline: none;
 }
 
-button {
-  padding: 0.3em 4em;
+button.login {
+  padding: 0.3em 6.95rem;
   font-family: Montserrat;
-  font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   color: rgb(255, 255, 255);
   background-color: rgb(5, 203, 203);
+}
+
+.login a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4em;
 }
