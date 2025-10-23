@@ -16,7 +16,7 @@ export default function LandingPage() {
 
       <div className="intro">
         <div className="typewriter-div">
-          <h1 className="user">EKANEM VICTOR{values}</h1>
+          <h1 className="user">Ekan Vick{values}</h1>
         </div>
         <p className="role">
           <span id="react">React</span> Frontend Developer
@@ -26,9 +26,11 @@ export default function LandingPage() {
           <span id="line">with React. Creating responsive interface</span>
           <span id="line">using stateful components.</span>
         </p>
-        <button className="explore">
-          <Link to="/portfolio">Explore</Link>
-        </button>
+        <div className="bouncy">
+          <button className="explore">
+            <Link to="/portfolio">Explore</Link>
+          </button>
+        </div>
       </div>
       {/* <Portfolio /> */}
     </div>

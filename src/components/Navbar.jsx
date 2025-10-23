@@ -10,7 +10,7 @@ export default function Navbar() {
       <nav class="navbar fixed-top">
         <div class="container-fluid">
           <Link class="navbar-brand" to="/landingpage">
-            {values}
+          {values}
           </Link>
           <div className="toggle-outline">
             <button

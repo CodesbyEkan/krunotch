@@ -9,52 +9,77 @@
   position: relative;
   margin: 0;
   padding-top: 1.6rem;
-  /* background-color: rgb(114, 205, 205); */
-  /* box-shadow: 0px 0px 8px rgb(0, 0, 0); */
-}
-
-.navbar-toggler {
-  outline: none;
-  border: none;
 }
 
 .toggle-outline {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(16, 146, 146);
-  opacity: 0.9;
-  border: 6px solid rgba(16, 146, 146, 0.425);
+  margin-right: 1em;
+  padding: 1.5em;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
   border-radius: 50%;
-  animation: bubble 0.7s ease-in-out 1s infinite alternate;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  outline: none;
+}
+
+.toggle-outline::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  background-color: whitesmoke;
+  padding: 1.5em;
+  z-index: -1;
+  animation: bubble 0.8s ease-in-out 1s infinite alternate;
 }
 
 @keyframes bubble {
   from {
-    border: 6px solid rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
   }
   to {
-    border: 6px solid rgba(0, 0, 0, 0.425);
+    background-color: rgba(255, 255, 255, 0.15);
   }
 }
 
+.navbar-toggler {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(16, 146, 146);
+  outline: none;
+}
+
 .navbar-toggler-icon {
+  position: absolute;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(225, 225, 225)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M7 9h16M4 15h22M7 21h16'/%3e%3c/svg%3e");
   width: 45px;
   height: 45px;
-  transform: rotate(135deg);
-  animation: spin-toggle 1.8s ease-out 1s infinite alternate;
+  transform: rotate(130deg);
+  animation: spin-toggle 1.6s ease-in-out 1s infinite alternate;
 }
 
 @keyframes spin-toggle {
   0% {
-    transform: rotate(135deg);
+    transform: rotate(130deg);
   }
-  25% {
-    transform: rotate(-36deg);
+  100% {
+    transform: rotate(-220deg);
   }
 }
 
@@ -73,7 +98,10 @@
   font-size: 2.1em;
 }
 
-button.btn-close {
+.offcanvas .btn-close {
+  margin-top: 1em;
+  margin-right: 1em;
+  padding: 0.7em;
   background-color: white;
 }
 
@@ -100,19 +128,18 @@ button.btn-close {
   margin: 3rem auto;
   height: 288px;
   width: 288px;
-  border: 3.7px dotted rgb(16, 146, 146);
+  border: 2px dotted rgba(16, 146, 146, 0.35);
   padding: 4rem;
   border-radius: 50%;
-  animation: profile 5s ease-in-out 1s infinite alternate-reverse;
+  animation: profile 5s ease-in 0.5s infinite alternate-reverse;
 }
 
 .profile-pic {
-  background-image: url("./assets/Explore.png");
+  background-image: url("./assets/ekan_vick.png");
   background-size: cover;
   position: absolute;
-  height: 256px;
-  width: 256px;
-  border: 3px solid rgba(9, 202, 202, 0.753);
+  height: 260px;
+  width: 260px;
   border-radius: 50%;
   box-shadow: 0px 0px 12px rgba(9, 202, 202, 0.639);
 }
@@ -146,13 +173,13 @@ button.btn-close {
   overflow: hidden;
   white-space: nowrap;
   font-size: 1.8em;
+  letter-spacing: 0.1em;
   font-weight: bold;
   line-height: 0.9;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-shadow: 0 0 35px rgb(8, 60, 60);
-  border-right: 0.15em solid orange;
-  animation: typing 3.5s steps(30, end) forwards,
-    blink-caret 0.5s step-end infinite;
+  border-right: 0.15em solid rgb(16, 146, 146);
+  animation: typing 1s steps(30, end) forwards, blink-caret 3s step-end infinite;
 }
 
 @keyframes blink-caret {
@@ -161,7 +188,7 @@ button.btn-close {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: rgb(16, 146, 146);
   }
 }
 
@@ -174,32 +201,10 @@ button.btn-close {
   }
 }
 
-.user::after {
-  position: absolute;
-  content: "";
-  width: 2.2em;
-  height: 0.08em;
-  background-color: rgb(1, 142, 142);
-  z-index: 1;
-  top: -1px;
-  right: 23px;
-}
-
-.user::before {
-  position: absolute;
-  content: "";
-  width: 1.4em;
-  height: 0.07em;
-  background-color: rgb(9, 202, 202);
-  z-index: 1;
-  bottom: -1px;
-  left: 18px;
-}
-
 .role {
   margin: 0;
-  padding-top: 1rem;
-  font-size: 1.1em;
+  padding-top: 0.6em;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 25px;
 }
@@ -213,7 +218,7 @@ button.btn-close {
 
 #about {
   padding-top: 0.6rem;
-  font-size: .87em;
+  font-size: 0.87em;
   font-weight: 500;
 }
 
@@ -222,8 +227,8 @@ button.btn-close {
 }
 
 .intro button.explore {
-  margin-top: 0.8em;
-  padding: 0.4em 2.8em;
+  position: absolute;
+  padding: 0.3em 2em;
   background-color: rgb(9, 202, 202);
   color: white;
   border-radius: 2em;
@@ -232,15 +237,34 @@ button.btn-close {
   box-shadow: 0 0 35px rgb(8, 60, 60);
 }
 
+.bouncy {
+  position: relative;
+  margin-top: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  animation: bounce 1.5s ease-in-out 1s infinite alternate;
+}
+
 .explore a {
   margin: 0;
   padding: 0;
   text-decoration: none;
   text-transform: capitalize;
-  color: white;
+  color: rgb(8, 60, 60);
   font-size: 1.4rem;
   font-weight: bold;
   font-family: "monospace";
+}
+
+@keyframes bounce {
+  from {
+    top: 0;
+  }
+  to {
+    top: 10px;
+  }
 }
 
 .portfolio,
