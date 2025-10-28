@@ -269,8 +269,7 @@
 
 .portfolio,
 .contact {
-  text-transform: uppercase;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 /*  LOGIN PAGE DESIGN */
@@ -316,4 +315,16 @@ button.login {
   color: white;
   font-weight: 700;
   font-size: 1.4em;
+}
+
+.portfolio {
+  padding: 0 1em;
+}
+
+.storyline {
+  margin: 0 2em;
+  padding: 0 2em;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(16, 146, 146);
 }

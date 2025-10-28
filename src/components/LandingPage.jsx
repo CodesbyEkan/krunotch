@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Portfolio from "./Portfolio";
+import Project from "./Project";
+import Contact from "./Contact";
 import { useContext } from "react";
 import { MyContext } from "./MyContext";
 
@@ -32,7 +34,10 @@ export default function LandingPage() {
           </button>
         </div>
       </div>
-      {/* <Portfolio /> */}
+      <Portfolio />
+      <Project/>
+      <Contact/>
+
     </div>
   );
 }
