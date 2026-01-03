@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { MyContext } from "./MyContext";
+import { UserContext } from "./UserContext";
 
 export default function Contact() {
-  const { values } = useContext(MyContext);
-  return <h1 className="contact">{values}'s Contacts</h1>;
+  const { user } = useContext(UserContext);
+  return <h1 className="contact">{user}'s Contacts</h1>;
 }

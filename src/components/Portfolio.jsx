@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import { MyContext } from "./MyContext";
+import { UserContext } from "./UserContext";
 
 export default function Portfolio() {
-  const { values } = useContext(MyContext);
+  const { user } = useContext(UserContext);
   return (
     <div className="portfolio">
       <div className="storyline">
         <p>ipsium </p>
       </div>
-      <h1 className="my-portfolio">{values}'s Portfolio</h1>
+      <h1 className="my-portfolio">{user}'s Portfolio</h1>
     </div>
   );
 }

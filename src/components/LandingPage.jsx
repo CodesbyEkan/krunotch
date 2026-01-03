@@ -3,11 +3,11 @@ import Portfolio from "./Portfolio";
 import Project from "./Project";
 import Contact from "./Contact";
 import { useContext } from "react";
-import { MyContext } from "./MyContext";
+import { UserContext } from "./UserContext";
 
 export default function LandingPage() {
-  const { values } = useContext(MyContext);
-
+  const { user } = useContext(UserContext);
+  console.log(`The user is: ${user}`);
   return (
     <div className="main-page">
       {/* Profile Picture */}
@@ -18,7 +18,7 @@ export default function LandingPage() {
 
       <div className="intro">
         <div className="typewriter-div">
-          <h1 className="user">Ekan Vick{values}</h1>
+          <h1 className="user">Ekanem Victor{user}</h1>
         </div>
         <p className="role">
           <span id="react">React</span> Frontend Developer
@@ -35,9 +35,8 @@ export default function LandingPage() {
         </div>
       </div>
       <Portfolio />
-      <Project/>
-      <Contact/>
-
+      <Project />
+      <Contact />
     </div>
   );
 }

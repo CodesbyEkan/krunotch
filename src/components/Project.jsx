@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { MyContext } from "./MyContext";
+import { UserContext } from "./UserContext";
 
 export default function Project() {
-  const { values } = useContext(MyContext);
-  return <h1 className="contact">{values}'s Projects</h1>;
+  const { user } = useContext(UserContext);
+  return <h1 className="contact">{user}'s Projects</h1>;
 }

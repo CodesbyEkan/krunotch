@@ -27,6 +27,7 @@
 .navbar-toggler:focus,
 .navbar-toggler:hover {
   outline: none;
+  border: none;
 }
 
 .toggle-outline::before {
@@ -98,6 +99,13 @@
   font-size: 2.1em;
 }
 
+.offcanvas {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .offcanvas .btn-close {
   margin-top: 1em;
   margin-right: 1em;
@@ -105,9 +113,12 @@
   background-color: white;
 }
 
-.offcanvas {
-  min-width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+.offcanvas-header{
+  display: flex;
+  margin: 0;
+  justify-content: end;
+  align-items: center;
+  padding: 1.6em .8em;
 }
 
 .navbar-nav {
@@ -135,7 +146,7 @@
 }
 
 .profile-pic {
-  background-image: url("./assets/ekan_vick.png");
+  background-image: url("./assets/userpics.jpg");
   background-size: cover;
   position: absolute;
   height: 260px;
@@ -172,11 +183,11 @@
   width: 0px;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 1.8em;
+  font-size: 1.6em;
   letter-spacing: 0.1em;
   font-weight: bold;
   line-height: 0.9;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   text-shadow: 0 0 35px rgb(8, 60, 60);
   border-right: 0.15em solid rgb(16, 146, 146);
   animation: typing 1s steps(30, end) forwards, blink-caret 3s step-end infinite;
@@ -205,21 +216,22 @@
   margin: 0;
   padding-top: 0.6em;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 25px;
+  text-transform: uppercase;
 }
 
 #react {
   text-transform: uppercase;
   font-size: 1.1em;
-  font-weight: 900;
+  font-weight: 400;
   color: rgb(9, 202, 202);
 }
 
 #about {
   padding-top: 0.6rem;
-  font-size: 0.87em;
-  font-weight: 500;
+  font-size: 0.97em;
+  font-weight: 600;
 }
 
 #line {
@@ -253,8 +265,9 @@
   text-decoration: none;
   text-transform: capitalize;
   color: rgb(8, 60, 60);
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: lowercase;
   font-family: "monospace";
 }
 
