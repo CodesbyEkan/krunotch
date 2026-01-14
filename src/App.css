@@ -3,12 +3,27 @@
     sans-serif;
   margin: 0 auto;
   text-align: center;
+  --bg1: whitesmoke;
+  --bg2: rgb(8, 60, 60);
+  --bg3: rgb(9, 202, 202);
+  --t-color1: rgb(8, 60, 60);
+  --t-color2: whitesmoke;
 }
+
+/****************************************/
+/*            NAVBAR STYLING            */
+/****************************************/
 
 .navbar {
   position: relative;
   margin: 0;
-  padding-top: 1.6rem;
+  padding: 0;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: end;
+  padding: 1.6em 0.8em;
 }
 
 .toggle-outline {
@@ -24,12 +39,6 @@
   border-radius: 50%;
 }
 
-.navbar-toggler:focus,
-.navbar-toggler:hover {
-  outline: none;
-  border: none;
-}
-
 .toggle-outline::before {
   content: "";
   position: absolute;
@@ -38,19 +47,10 @@
   align-items: center;
   width: 75px;
   height: 75px;
-  background-color: whitesmoke;
+  background-color: var(--bg1);
   padding: 1.5em;
   z-index: -1;
-  animation: bubble 0.8s ease-in-out 1s infinite alternate;
-}
-
-@keyframes bubble {
-  from {
-    background-color: rgba(255, 255, 255, 0);
-  }
-  to {
-    background-color: rgba(255, 255, 255, 0.15);
-  }
+  animation: bubble 0.8s ease-in 1s infinite alternate;
 }
 
 .navbar-toggler {
@@ -62,7 +62,7 @@
   height: 50px;
   border: none;
   border-radius: 50%;
-  background-color: rgb(16, 146, 146);
+  background-color: var(--bg2);
   outline: none;
 }
 
@@ -75,22 +75,12 @@
   animation: spin-toggle 1.6s ease-in-out 1s infinite alternate;
 }
 
-@keyframes spin-toggle {
-  0% {
-    transform: rotate(130deg);
-  }
-  100% {
-    transform: rotate(-220deg);
-  }
-}
-
 .navbar-brand,
 .nav-link,
 .offcanvas-title,
 .nav-link.active {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: white !important;
+  font-size: 1.8rem;
+  color: var(--t-color1) !important;
   text-shadow: 0px 0px 12px rgb(16, 146, 146);
 }
 
@@ -100,33 +90,44 @@
 }
 
 .offcanvas {
+  display: flex;
+  justify-content: center;
   position: absolute;
-  min-width: 100%;
+  min-width: 100vw;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--bg1);
+  animation: swipe-left 0.25s ease-out;
 }
 
-.offcanvas .btn-close {
-  margin-top: 1em;
-  margin-right: 1em;
-  padding: 0.7em;
-  background-color: white;
-}
-
-.offcanvas-header{
+.offcanvas-header {
   display: flex;
   margin: 0;
-  justify-content: end;
+  padding: 0;
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 1.6em .8em;
 }
 
-.navbar-nav {
-  margin: 0 auto;
-  padding-top: 13rem;
+/****************************************/
+/*          LANDING PAGE STYLING        */
+/****************************************/
+
+.landing-page {
+  width: 100%;
+  height: 80vh;
+  position: relative;
 }
 
-/* {<>} */
+.main-page {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  animation: swipe-right 1.5s ease-out;
+}
 
 .anim-container {
   display: flex;
@@ -139,10 +140,10 @@
   margin: 3rem auto;
   height: 288px;
   width: 288px;
-  border: 2px dotted rgba(16, 146, 146, 0.35);
+  border: 2px dotted rgba(8, 60, 60, 0.3);
   padding: 4rem;
   border-radius: 50%;
-  animation: profile 5s ease-in 0.5s infinite alternate-reverse;
+  animation: spinner 2s ease-in 0.5s infinite alternate-reverse;
 }
 
 .profile-pic {
@@ -152,17 +153,7 @@
   height: 260px;
   width: 260px;
   border-radius: 50%;
-  box-shadow: 0px 0px 12px rgba(9, 202, 202, 0.639);
-}
-
-@keyframes profile {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  box-shadow: 0px 0px 12px rgba(8, 60, 60, 0.9);
 }
 
 .intro {
@@ -171,6 +162,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "montserrat";
 }
 
 .typewriter-div {
@@ -185,12 +177,157 @@
   white-space: nowrap;
   font-size: 1.6em;
   letter-spacing: 0.1em;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 0.9;
   text-transform: uppercase;
-  text-shadow: 0 0 35px rgb(8, 60, 60);
-  border-right: 0.15em solid rgb(16, 146, 146);
-  animation: typing 1s steps(30, end) forwards, blink-caret 3s step-end infinite;
+  text-shadow: 0 0 5px rgba(8, 60, 60, 0.6);
+  border-right: 0.15em solid var(--bg2);
+  animation: typing 1s 1.8s steps(30, end) forwards,
+    blink-caret 3s step-end infinite;
+}
+
+.role {
+  margin: 0;
+  padding-top: 0.6em;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#react {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgb(9, 202, 202);
+}
+
+#about {
+  padding-top: 0.3em;
+  line-height: 1.3em;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+#line {
+  display: block;
+}
+
+.cta-box {
+  position: relative;
+  margin: 1em 0 0 0;
+  width: 23em;
+  height: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.cta-box .explores,
+.cta-box .contact {
+  position: absolute;
+  animation: bounce 1.5s ease-in-out 1s infinite alternate;
+}
+
+.explores {
+  left: 1%;
+}
+
+.contact {
+  right: 1%;
+}
+
+button.explore {
+  padding: 0.3em 1.6em;
+  /* background-color: var(--bg1); */
+  border: 0.05em solid var(--bg2);
+  border-radius: 0.5em;
+  box-shadow: 0 0 15px rgba(8, 60, 60, 0.3);
+}
+
+.explores button.explore {
+  background-color: var(--bg2);
+}
+
+.contact button.explore {
+  background-color: var(--bg1);
+}
+
+button.explore a {
+  text-decoration: none;
+  color: var(--t-color1);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-family: "montserrat";
+}
+
+.explores button.explore a {
+  color: var(--t-color2);
+}
+
+.portfolio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  /* background-color: whitesmoke; */
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.skill-box {
+  width: 20em;
+  height: 20em;
+  border: none;
+
+  background-color: whitesmoke;
+}
+
+/****************************************/
+/*               ANIMATIONS             */
+/****************************************/
+
+@keyframes bubble {
+  from {
+    background-color: rgba(8, 60, 60, 0.25);
+  }
+  to {
+    background-color: rgba(8, 60, 60, 0.05);
+  }
+}
+@keyframes bubble-reversed {
+  from {
+    background-color: rgba(8, 60, 60, 0.05);
+  }
+  to {
+    background-color: rgba(8, 60, 60, 0.25);
+  }
+}
+
+@keyframes spin-toggle {
+  0% {
+    transform: rotate(130deg);
+  }
+  100% {
+    transform: rotate(-220deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes blink-caret {
@@ -212,65 +349,6 @@
   }
 }
 
-.role {
-  margin: 0;
-  padding-top: 0.6em;
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 25px;
-  text-transform: uppercase;
-}
-
-#react {
-  text-transform: uppercase;
-  font-size: 1.1em;
-  font-weight: 400;
-  color: rgb(9, 202, 202);
-}
-
-#about {
-  padding-top: 0.6rem;
-  font-size: 0.97em;
-  font-weight: 600;
-}
-
-#line {
-  display: block;
-}
-
-.intro button.explore {
-  position: absolute;
-  padding: 0.3em 2em;
-  background-color: rgb(9, 202, 202);
-  color: white;
-  border-radius: 2em;
-  border: 7px solid rgba(0, 0, 0, 0.425);
-  font-family: "monospace";
-  box-shadow: 0 0 35px rgb(8, 60, 60);
-}
-
-.bouncy {
-  position: relative;
-  margin-top: 2.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: red;
-  animation: bounce 1.5s ease-in-out 1s infinite alternate;
-}
-
-.explore a {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  text-transform: capitalize;
-  color: rgb(8, 60, 60);
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: lowercase;
-  font-family: "monospace";
-}
-
 @keyframes bounce {
   from {
     top: 0;
@@ -280,64 +358,43 @@
   }
 }
 
-.portfolio,
-.contact {
-  margin-top: 5rem;
+@keyframes swipe-right {
+  0% {
+    left: -300px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
 }
 
-/*  LOGIN PAGE DESIGN */
-
-.login-header {
-  margin: 7.7em 0 1em 0;
-  font-family: Montserrat;
-  font-size: 1.6rem;
-  text-transform: capitalize;
+@keyframes swipe-left {
+  0% {
+    right: -300px;
+    opacity: 0;
+  }
+  100% {
+    right: 0px;
+    opacity: 1;
+  }
 }
 
-label {
-  display: inline-block;
-  margin-bottom: 0.3em;
-  font-family: Montserrat;
-  text-transform: capitalize;
-  font-size: 1.2rem;
+/****************************************/
+/*            PORTFOLIO PAGE            */
+/****************************************/
+
+.portfolio .skill-set {
+  width: 100% ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--bg3);
 }
 
-input {
-  height: 2.6em;
-  width: 60%;
-  padding: 0 1em;
-  /* margin-left: 2em; */
-  margin-bottom: 1.5em;
-  border: none;
-  border-radius: 6px;
-  outline: none;
-}
+.skill-set .skill-box {
+  width: 80%;
+  border: 2px solid var(--bg3);
 
-button.login {
-  padding: 0.3em 6.95rem;
-  font-family: Montserrat;
-  /* text-transform: uppercase; */
-  border: none;
-  border-radius: 6px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(5, 203, 203);
-}
-
-.login a {
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-  font-size: 1.4em;
-}
-
-.portfolio {
-  padding: 0 1em;
-}
-
-.storyline {
-  margin: 0 2em;
-  padding: 0 2em;
-  border: none;
-  border-radius: 15px;
-  background-color: rgb(16, 146, 146);
 }

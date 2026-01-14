@@ -22,15 +22,12 @@ export default function Navbar() {
               aria-label="Toggle navigation"
               onClick={() => setIsToggled((prevToggle) => !prevToggle)}
             >
-              {isToggled
-                ? console.log("Button is toggled")
-                : console.log("Button is not toggled!!")}
               <span className="navbar-toggler-icon"></span>
             </button>
           </div>
           {isToggled && (
             <div
-              className={`offcanvas offcanvas-end ${isToggled ? "show" : ""}`}
+              className="offcanvas offcanvas-end show"
               tabIndex="-1"
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
@@ -39,21 +36,26 @@ export default function Navbar() {
                 <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                   {user}
                 </h5>
-                <div className="toggle-outline">
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    aria-controls="offcanvasNavbar"
-                    aria-label="Toggle navigation"
-                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
-                  >
-                    <span className="navbar-toggler-icon"></span>
-                  </button>
+                <div className="container-fluid">
+                  <div className="toggle-outline">
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      aria-controls="offcanvasNavbar"
+                      aria-label="Toggle navigation"
+                      onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+                    >
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="offcanvas-body">
-                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li className="nav-item">
+                <ul className="navbar-nav justify-content">
+                  <li
+                    className="nav-item"
+                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+                  >
                     <Link
                       className="nav-link active"
                       aria-current="page"
@@ -62,7 +64,10 @@ export default function Navbar() {
                       HOME
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li
+                    className="nav-item"
+                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+                  >
                     <Link
                       className="nav-link active"
                       aria-current="page"
@@ -71,7 +76,10 @@ export default function Navbar() {
                       PORTFOLIO
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li
+                    className="nav-item"
+                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+                  >
                     <Link
                       className="nav-link active"
                       aria-current="page"
@@ -80,7 +88,10 @@ export default function Navbar() {
                       PROJECTS
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li
+                    className="nav-item"
+                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+                  >
                     <Link className="nav-link" to="/contact">
                       CONTACTS
                     </Link>

@@ -5,8 +5,11 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(8, 60, 60);
+  /* color: rgba(255, 255, 255, 0.87); */
+  --bg1: whitesmoke;
+  --bg2: rgb(8, 60, 60);
+  --t-color1: rgb(8, 60, 60);
+  --t-color2: whitesmoke;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,8 +21,8 @@
 ::after,
 body {
   box-sizing: border-box;
-  background-color: rgb(8, 60, 60);
-  color: white;
+  background-color: var(--bg1);
+  color: var(--t-color1);
 }
 
 html,
