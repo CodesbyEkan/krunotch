@@ -12,6 +12,13 @@ export default function LandingPage() {
     <>
       <div className="landing-page">
         <div className="main-page">
+          <div className="scrollbar">
+            <div className="active mini-link"></div>
+            <div className="mini-link"></div>
+            <div className="mini-link"></div>
+            <div className="mini-link"></div>
+            <div className="mini-link"></div>
+          </div>
           <div className="anim-container">
             <div className="profile-pic-animation"></div>
             <div className="profile-pic"></div>

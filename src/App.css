@@ -122,6 +122,47 @@
   position: relative;
 }
 
+.scrollbar {
+  position: fixed;
+  width: 50px;
+  background-color: transparent;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  visibility: visible;
+  z-index: 9;
+}
+
+.scrollbar .mini-link {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: var(--bg2);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.mini-link::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.5);
+}
+
+.scrollbar .mini-link.active {
+  height: 40px;
+  opacity: 0.9;
+}
+
 .main-page {
   width: 100%;
   position: absolute;
@@ -385,7 +426,7 @@ button.explore a {
 /****************************************/
 
 .portfolio .skill-set {
-  width: 100% ;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -396,5 +437,4 @@ button.explore a {
 .skill-set .skill-box {
   width: 80%;
   border: 2px solid var(--bg3);
-
 }
