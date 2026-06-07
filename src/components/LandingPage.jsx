@@ -10,41 +10,43 @@ export default function LandingPage() {
   console.log(`The user is: ${user}`);
   return (
     <>
-      <div className="landing-page h-screen relative bg-zinc-50 pt-30">
-        <div className="main-page">
-          <div className="scrollbar">
-            <div className="active mini-link"></div>
-            <div className="mini-link"></div>
-            <div className="mini-link"></div>
-            <div className="mini-link"></div>
-            <div className="mini-link"></div>
+      <div className="h-screen relative bg-zinc-50 pt-30">
+        <div className="absolute w-full h-full animate-swipe">
+          <div className="fixed w-[50px] bg-transparent flex flex-col justify-center items-center gap-3 visible z-[9]">
+            <div className="active relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale- before:rounded-full active:h-[40px] opacity:[0.9]"></div>
+            <div className="relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:transform-scale(1.5) before:rounded-full active:h-[40px] opacity:[0.9]"></div>
+            <div className="relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:transform-scale(1.5) before:rounded-full active:h-[40px] opacity:[0.9]"></div>
+            <div className="relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:transform-scale(1.5) before:rounded-full active:h-[40px] opacity:[0.9]"></div>
+            <div className="relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:transform-scale(1.5) before:rounded-full active:h-[40px] opacity:[0.9]"></div>
           </div>
-          <div className="anim-container">
-            <div className="profile-pic-animation"></div>
-            <div className="profile-pic"></div>
+          <div className="anim-container flex justify-center items-center">
+            <div className="relative my-[3em] mx-auto h-[288px] w-[288px] border-2 border-dotted border-zinc-500 rounded-full p-[4em] animate-spin"></div>
+            <div className="profile-pic bg-[url('./assets/userpics.jpg')] bg-cover bg-center absolute h-[260px] w-[260px] rounded-full tracking-widest shadow-xl shadow-zinc-500/50"></div>
           </div>
 
-          <div className="intro">
-            <div className="typewriter-div">
-              <h1 className="user">Ekanem Victor{user}</h1>
+          <div className="relative flex flex-col justify-center items-center">
+            <div className="flex">
+              <h1 className="relative my-[0] mx-auto w-[0] overflow-hidden whitespace-nowrap text-[1.8rem] text-zinc-700 font-semibold uppercase border-r-6 border-zinc-800 text-shadow-lg leading-snug animate-typewriter hover:animate-typewriter cursor-pointer">
+                <span className="font-light">&#123;</span> Ekanem Victor{user}
+                <span className="font-light"> &#125;</span>
+              </h1>
             </div>
-            <p className="text-red-200 role">
-              <span id="react">React</span> Frontend Developer
+            <p className="text-[1.2rem] text-zinc-600 font-light tracking-wide uppercase">
+              &lt; Fullstack Engineer &#47;&gt;
             </p>
-            <p id="about">
-              Hi, so nice having you here😊...
-              <span id="line">I'm a frontend developer with react, vast</span>
-              <span id="line">experience in creating responsive &</span>
-              <span id="line">interactive interface.</span>
+            <p className="w-90 mt-2 text-[1.05rem] tracking-wide text-center text-zinc-500">
+              I build optimized, reliable, scalable web services. Converting
+              ideas into clean UI, with real results using tools such as React,
+              NextJS, Node.js, Express, Tailwind.
             </p>
-            <div className="cta-box">
+            <div className="cta-box relative mt-[2em] flex justify-between items-center w-5/8">
               <div className="explores">
-                <button className="explore">
+                <button className="py-[0.3em] px-[1.6em]  bg-zinc-800 text-zinc-100 text-lg shadow-lg rounded-lg font-bold cursor-pointer hover:bg-zinc-700">
                   <Link to="/portfolio">Explore</Link>
                 </button>
               </div>
               <div className="contact">
-                <button className="explore">
+                <button className="explore py-[0.3em] px-[1.6em]  bg-zinc-800 text-zinc-100 text-lg shadow-lg  rounded-lg font-bold cursor-pointer hover:bg-zinc-700">
                   <Link to="/contact">Contact</Link>
                 </button>
               </div>
