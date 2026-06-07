@@ -9,55 +9,74 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar fixed-top">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/landingpage">
+      <nav className="flex bg-zinc-50 absolute w-full z-10">
+        <div className="flex justify-end w-full px-[0.8]">
+          <Link className="text-[1.8rem] text-slate-300" to="/landingpage">
             {user}
           </Link>
-          <div className="toggle-outline">
+          <div className="relative bg-slate-300 my-6 mx-6 flex justify-center items-center p-[1.5em] w-[70px] h-[70px] rounded-[50%] overflow-hidden">
+            <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
             <button
-              className="navbar-toggler"
+              className="absolute flex justify-center items-center w-[55px] h-[55px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
               type="button"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
               onClick={() => setIsToggled((prevToggle) => !prevToggle)}
             >
-              <span className="navbar-toggler-icon"></span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="50px"
+                width="50px"
+                viewBox="0 0 30 30"
+                className="fill-slate-800 stroke-[3] stroke-slate-300"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeMiterlimit={"0"}
+                  d="M7 9h16M4 15h22M7 21h16"
+                />
+              </svg>
             </button>
           </div>
           {isToggled && (
-            <div
-              className="offcanvas offcanvas-end show"
-              tabIndex="-1"
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-            >
-              <div className="offcanvas-header">
+            <div className="bg-slate-950/50 backdrop-blur-sm absolute w-full h-screen flex flex-col items-center">
+              <div className="offcanvas-header flex justify-end w-full">
                 <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                   {user}
                 </h5>
-                <div className="container-fluid">
-                  <div className="toggle-outline">
+                <div className="m-l-[1em] text-[2.1rem]">
+                  <div className="relative bg-slate-400 my-6 mx-6 flex justify-center items-center  w-[70px] h-[70px] rounded-[50%] overflow-hidden">
+                    <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
                     <button
-                      className="navbar-toggler"
+                      className="absolute flex justify-center items-center w-[55px] h-[55px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
                       type="button"
-                      aria-controls="offcanvasNavbar"
-                      aria-label="Toggle navigation"
                       onClick={() => setIsToggled((prevToggle) => !prevToggle)}
                     >
-                      <span className="navbar-toggler-icon"></span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="50px"
+                        width="50px"
+                        viewBox="0 0 30 30"
+                        className="fill-slate-800 stroke-[3] stroke-slate-300"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeMiterlimit={"0"}
+                          d="M7 9h16M4 15h22M7 21h16"
+                        />
+                      </svg>
                     </button>
                   </div>
                 </div>
               </div>
-              <div className="offcanvas-body">
-                <ul className="navbar-nav justify-content">
+              <div className="offcanvas w-full h-screen flex justify-center items-center">
+                <ul className="text-zinc-300 text-center text-4xl text-shadow-md font-light py-6">
                   <li
-                    className="nav-item"
+                    className="my-8"
                     onClick={() => setIsToggled((prevToggle) => !prevToggle)}
                   >
                     <Link
-                      className="nav-link active"
+                      className="active"
                       aria-current="page"
                       to="/landingpage"
                     >
@@ -65,7 +84,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li
-                    className="nav-item"
+                    className="my-8"
                     onClick={() => setIsToggled((prevToggle) => !prevToggle)}
                   >
                     <Link
@@ -77,7 +96,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li
-                    className="nav-item"
+                    className="my-8"
                     onClick={() => setIsToggled((prevToggle) => !prevToggle)}
                   >
                     <Link
@@ -89,7 +108,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li
-                    className="nav-item"
+                    className="my-8"
                     onClick={() => setIsToggled((prevToggle) => !prevToggle)}
                   >
                     <Link className="nav-link" to="/contact">

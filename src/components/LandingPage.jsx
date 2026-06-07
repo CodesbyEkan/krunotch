@@ -10,7 +10,7 @@ export default function LandingPage() {
   console.log(`The user is: ${user}`);
   return (
     <>
-      <div className="landing-page">
+      <div className="landing-page h-screen relative bg-zinc-50 pt-30">
         <div className="main-page">
           <div className="scrollbar">
             <div className="active mini-link"></div>
@@ -28,7 +28,7 @@ export default function LandingPage() {
             <div className="typewriter-div">
               <h1 className="user">Ekanem Victor{user}</h1>
             </div>
-            <p className="role">
+            <p className="text-red-200 role">
               <span id="react">React</span> Frontend Developer
             </p>
             <p id="about">
