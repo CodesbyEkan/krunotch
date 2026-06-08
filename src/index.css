@@ -1,9 +1,19 @@
 @import "tailwindcss";
 /* @source "./src*.[js,jsx,ts,tsx]"; */
+
+@font-face {
+  font-family: "makira";
+  src: url("./assets/fonts/makira.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @theme {
+  --font-makira: "Makira", sans-serif;
   --font-sans: "montserrat";
   --animate-pulse-ping: pulse-ping 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  --animate-typewriter: typing 1s 1.8s steps(25) forwards, blink-caret 3s step-end infinite;
+  --animate-typewriter:
+    typing 1s 1.8s steps(25) forwards, blink-caret 3s step-end infinite;
   --animate-swipe: swipe-right 1.5s ease-out;
 }
 

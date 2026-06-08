@@ -10,14 +10,29 @@ export default function LandingPage() {
   console.log(`The user is: ${user}`);
   return (
     <>
-      <div className="h-screen relative bg-zinc-50 pt-30">
-        <div className="absolute w-full h-full animate-swipe">
-          <div className="fixed w-[50px] bg-transparent flex flex-col justify-center items-center gap-3 visible z-[9]">
-            <div className="active relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale- before:rounded-full active:h-[40px] opacity:[0.9]"></div>
-            <div className="relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:transform-scale(1.5) before:rounded-full active:h-[40px] opacity:[0.9]"></div>
-            <div className="relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:transform-scale(1.5) before:rounded-full active:h-[40px] opacity:[0.9]"></div>
-            <div className="relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:transform-scale(1.5) before:rounded-full active:h-[40px] opacity:[0.9]"></div>
-            <div className="relative w-[15px] h-[15px] flex justify-center items-center rounded-[30px] bg-zinc-400 opacity-[0.7] cursor-pointer before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:transform-scale(1.5) before:rounded-full active:h-[40px] opacity:[0.9]"></div>
+      <div className="h-screen relative pt-30">
+        <div className="absolute z-1 w-full h-full animate-swipe">
+          <div className="fixed top-53 w-[50px] bg-transparent flex flex-col justify-center items-center gap-[3vh] visible z-[9]">
+            <div
+              data-active=""
+              className="relative w-[12px] h-[12px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-150 before:rounded-[30px] before:z-[-1]"
+            ></div>
+            <div
+              data-active="true"
+              className="relative w-[12px] h-[12px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:rounded-[30px] before:z-[-1]"
+            ></div>
+            <div
+              data-active=""
+              className="relative w-[12px] h-[12px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-150 before:rounded-[30px] before:z-[-1]"
+            ></div>
+            <div
+              data-active=""
+              className="relative w-[12px] h-[12px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-150 before:rounded-[30px] before:z-[-1]"
+            ></div>
+            <div
+              data-active=""
+              className="relative w-[12px] h-[12px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-150 before:rounded-[30px] before:z-[-1]"
+            ></div>
           </div>
           <div className="anim-container flex justify-center items-center">
             <div className="relative my-[3em] mx-auto h-[288px] w-[288px] border-2 border-dotted border-zinc-500 rounded-full p-[4em] animate-spin"></div>
@@ -26,7 +41,7 @@ export default function LandingPage() {
 
           <div className="relative flex flex-col justify-center items-center">
             <div className="flex">
-              <h1 className="relative my-[0] mx-auto w-[0] overflow-hidden whitespace-nowrap text-[1.8rem] text-zinc-700 font-semibold uppercase border-r-6 border-zinc-800 text-shadow-lg leading-snug animate-typewriter hover:animate-typewriter cursor-pointer">
+              <h1 className="relative my-[0] mx-auto w-[0] overflow-hidden whitespace-nowrap text-[1.9rem] text-zinc-700 font-makira font-bold uppercase border-r-6 border-zinc-800 text-shadow-lg leading-snug animate-typewriter hover:animate-typewriter cursor-pointer">
                 <span className="font-light">&#123;</span> Ekanem Victor{user}
                 <span className="font-light"> &#125;</span>
               </h1>

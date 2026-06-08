@@ -9,12 +9,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex bg-zinc-50 absolute w-full z-10">
+      <nav className="fixed bg-zinc-100/30 backdrop-blur w-full z-2">
         <div className="flex justify-end w-full px-[0.8]">
           <Link className="text-[1.8rem] text-slate-300" to="/landingpage">
             {user}
           </Link>
-          <div className="relative bg-slate-300 my-6 mx-6 flex justify-center items-center p-[1.5em] w-[70px] h-[70px] rounded-[50%] overflow-hidden">
+          <div className="relative bg-zinc-300 my-6 mx-6 flex justify-center items-center p-[1.5em] w-[70px] h-[70px] rounded-[50%] overflow-hidden">
             <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
             <button
               className="absolute flex justify-center items-center w-[55px] h-[55px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
@@ -37,95 +37,92 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-          {isToggled && (
-            <div className="bg-slate-950/50 backdrop-blur-sm absolute w-full h-screen flex flex-col items-center">
-              <div className="offcanvas-header flex justify-end w-full">
-                <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                  {user}
-                </h5>
-                <div className="m-l-[1em] text-[2.1rem]">
-                  <div className="relative bg-slate-400 my-6 mx-6 flex justify-center items-center  w-[70px] h-[70px] rounded-[50%] overflow-hidden">
-                    <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
-                    <button
-                      className="absolute flex justify-center items-center w-[55px] h-[55px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
-                      type="button"
-                      onClick={() => setIsToggled((prevToggle) => !prevToggle)}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="50px"
-                        width="50px"
-                        viewBox="0 0 30 30"
-                        className="fill-slate-800 stroke-[3] stroke-slate-300"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeMiterlimit={"0"}
-                          d="M7 9h16M4 15h22M7 21h16"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="offcanvas w-full h-screen flex justify-center items-center">
-                <ul className="text-zinc-300 text-center text-4xl text-shadow-md font-light py-6">
-                  <li
-                    className="my-8"
-                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
-                  >
-                    <Link
-                      className="active"
-                      aria-current="page"
-                      to="/landingpage"
-                    >
-                      HOME
-                    </Link>
-                  </li>
-                  <li
-                    className="my-8"
-                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
-                  >
-                    <Link
-                      className="nav-link active"
-                      aria-current="page"
-                      to="/portfolio"
-                    >
-                      PORTFOLIO
-                    </Link>
-                  </li>
-                  <li
-                    className="my-8"
-                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
-                  >
-                    <Link
-                      className="nav-link active"
-                      aria-current="page"
-                      to="/project"
-                    >
-                      PROJECTS
-                    </Link>
-                  </li>
-                  <li
-                    className="my-8"
-                    onClick={() => setIsToggled((prevToggle) => !prevToggle)}
-                  >
-                    <Link className="nav-link" to="/contact">
-                      CONTACTS
-                    </Link>
-                  </li>
-                  {/* <li class="nav-item">
+        </div>
+      </nav>
+      {/* <div className="fixed h-screen inset-0 -z-1" /> */}
+      <div
+        className={`fixed w-full h-screen flex flex-col items-center z-50 bg-zinc-100/30 backdrop-blur-sm ${isToggled ? "opacity-100 visible" : "opacity-0 invisible"}`}
+      >
+        <div className="flex justify-end w-full">
+          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+            {user}
+          </h5>
+          <div className="m-l-[1em] text-[2.1rem]">
+            <div className="relative bg-slate-400 my-6 mx-6 flex justify-center items-center  w-[70px] h-[70px] rounded-[50%] overflow-hidden">
+              <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
+              <button
+                className="absolute flex justify-center items-center w-[55px] h-[55px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
+                type="button"
+                onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="50px"
+                  width="50px"
+                  viewBox="0 0 30 30"
+                  className="fill-slate-800 stroke-[3] stroke-slate-300"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeMiterlimit={"0"}
+                    d="M7 9h16M4 15h22M7 21h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-screen flex justify-center items-center">
+          <ul className="w-full h-full flex flex-col justify-center font-makira text-zinc-800 text-center text-4xl text-shadow-lg font-bold py-6">
+            <li
+              className="my-8"
+              onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+            >
+              <Link className="active" aria-current="page" to="/landingpage">
+                HOME
+              </Link>
+            </li>
+            <li
+              className="my-8"
+              onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+            >
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/portfolio"
+              >
+                PORTFOLIO
+              </Link>
+            </li>
+            <li
+              className="my-8"
+              onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+            >
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/project"
+              >
+                PROJECTS
+              </Link>
+            </li>
+            <li
+              className="my-8"
+              onClick={() => setIsToggled((prevToggle) => !prevToggle)}
+            >
+              <Link className="nav-link" to="/contact">
+                CONTACTS
+              </Link>
+            </li>
+            {/* <li class="nav-item">
                   <Link class="nav-link" to="/login">
                     LOG OUT
                   </Link>
                 </li> */}
-                </ul>
-              </div>
-            </div>
-          )}
+          </ul>
         </div>
-      </nav>
+      </div>
       <Outlet />
     </>
   );
