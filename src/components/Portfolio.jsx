@@ -9,7 +9,7 @@ export default function Portfolio() {
         <h1>Services</h1>
       </div>
       <div className="skill-set w-full flex flex-col gap-5 px-12 ">
-        <div className="skill-box w-full bg-zinc-950 h-80 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-103"></div>
+        <div className="skill-box w-full bg-red-950 h-80 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-103"></div>
         <div className="skill-box w-full bg-zinc-950 h-80 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-103"></div>
         <div className="skill-box w-full bg-zinc-950 h-80 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-103"></div>
       </div>
