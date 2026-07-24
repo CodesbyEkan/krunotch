@@ -1,18 +1,41 @@
 // import { useContext } from "react";
 // import { UserContext } from "./UserContext";
 
-export default function Portfolio() {
+const Portfolio = ({ ref }) => {
   // const { user } = useContext(UserContext);
   return (
-    <div className="portfolio relative w-full text-center flex flex-col justify-center items-center">
+    <section
+      ref={ref}
+      className="relative w-full text-center flex flex-col justify-center items-center"
+    >
       <div className="absolute sticky top-8 z-[10] header my-16 text-5xl text-zinc-700 font-makira font-semibold">
         <h1>Services</h1>
       </div>
-      <div className="skill-set w-full flex flex-col gap-5 px-12 ">
-        <div className="skill-box w-full bg-red-950 h-80 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-103"></div>
-        <div className="skill-box w-full bg-zinc-950 h-80 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-103"></div>
-        <div className="skill-box w-full bg-zinc-950 h-80 rounded-2xl cursor-pointer hover:shadow-lg hover:scale-103"></div>
+      <div className="w-full flex flex-col gap-5 px-12 ">
+        <div className="flex flex-col relative px-12 bg-zinc-300/20 h-70 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="absolute bg-zinc-800 w-[70px] h-[70px] rounded-[50%] top-[-20px] right-[-20px]"></div>
+          <h2 className="text-left text-zinc-800 text-3xl font-makira mt-18">
+            Let's talk<span className="block">about your project</span>
+          </h2>
+          <button className="w-fit text-left px-10 py-3 bg-zinc-800 rounded text-white text-xl mt-10 rounded-3xl uppercase cursor-pointer">
+            Connect
+          </button>
+        </div>
+        <div className="flex flex-col relative px-12 bg-zinc-300/20 h-70 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="absolute bg-zinc-800 w-[70px] h-[70px] rounded-[50%] top-[-20px] right-[-20px]"></div>
+          <h2 className="text-left text-zinc-800 text-3xl font-makira mt-18">
+            Let's talk<span className="block">about your project</span>
+          </h2>
+          <button className="w-fit text-left px-10 py-3 bg-zinc-800 rounded text-white text-xl mt-10 rounded-3xl uppercase cursor-pointer">
+            Connect
+          </button>
+        </div>
+        <div className="flex flex-col relative px-12 bg-zinc-300/20 h-70 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="absolute bg-zinc-800 w-[70px] h-[70px] rounded-[50%] top-[-20px] right-[-20px]"></div>
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default Portfolio;
