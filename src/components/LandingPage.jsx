@@ -5,24 +5,44 @@ import Contact from "./Contact";
 import { useContext } from "react";
 import { UserContext } from "./UserContext";
 
+import { useRef } from "react";
+
 export default function LandingPage() {
+  const sectionRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    console.log(ref.current.dataset.active);
+    const yOffset = -80;
+    const y =
+      ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+    // ref.current.ScrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    // });
+  };
   const { user } = useContext(UserContext);
-  console.log(`The user is: ${user}`);
+  // console.log(`The user is: ${user}`);
   return (
     <>
       <div className="h-screen relative pt-30">
         <div className="absolute z-1 w-full h-full animate-swipe">
-          <div className="fixed top-53 w-[50px] bg-transparent flex flex-col justify-center items-center gap-[3vh] visible z-[9]">
+          <div className="bg-red-600 fixed top-53 w-[50px] bg-transparent flex flex-col justify-center items-center gap-[3vh] visible z-[9]">
             <div
+              onClick={() => scrollToSection(sectionRef)}
               data-active=""
               className="relative w-[12px] h-[12px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-150 before:rounded-[30px] before:z-[-1]"
             ></div>
             <div
-              data-active="true"
+              data-active=""
               className="relative w-[12px] h-[12px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:rounded-[30px] before:z-[-1]"
             ></div>
             <div
-              data-active=""
+              data-active="true"
               className="relative w-[12px] h-[12px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-150 before:rounded-[30px] before:z-[-1]"
             ></div>
             <div
@@ -70,7 +90,7 @@ export default function LandingPage() {
         </div>
       </div>
       <div>
-        <Portfolio />
+        <Portfolio ref={sectionRef} />
         <Project />
         <Contact />
       </div>
