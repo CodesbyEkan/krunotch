@@ -1,7 +1,9 @@
-import { useContext } from "react";
-import { UserContext } from "./UserContext";
+const Contact = ({ ref }) => {
+  return (
+    <div ref={ref} className="relative h-screen">
+      <p className="py-8 text-center">Hello Contact</p>
+    </div>
+  );
+};
 
-export default function Contact() {
-  const { user } = useContext(UserContext);
-  return <h1 className="contact">{user}'s Contacts</h1>;
-}
+export default Contact;

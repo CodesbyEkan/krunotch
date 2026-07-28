@@ -1,7 +1,9 @@
-import { useContext } from "react";
-import { UserContext } from "./UserContext";
+const Project = ({ ref }) => {
+  return (
+    <div ref={ref} className="h-screen">
+      <h1 className="py-8 text-center">Hello Projects</h1>;
+    </div>
+  );
+};
 
-export default function Project() {
-  const { user } = useContext(UserContext);
-  return <h1 className="contact">{user}'s Projects</h1>;
-}
+export default Project;
