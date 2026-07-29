@@ -54,7 +54,7 @@ const Portfolio = ({ ref }) => {
             <h2 className="text-left text-zinc-800 text-3xl font-makira">
               Backend Eng.
             </h2>
-            <p className="text-left w-60">
+            <p className="text-left w-60 text-red-400">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Explicabo accusamus cumque voluptas ab veniam, doloremque rerum
               ratione, sint iure tenetur.
