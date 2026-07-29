@@ -21,7 +21,7 @@ const Portfolio = ({ ref }) => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col justify-center relative px-6 py-[9em] bg-zinc-300/20 h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+        <div className="flex flex-col justify-center relative px-6 py-[7.5em] bg-zinc-300/20 h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
           <div className="absolute flex flex-col items-center justify-center bg-white border-1 border-zinc-400 bg-zinc-100 w-[55px] h-[55px] rounded-[50%] top-[-20px] right-[-20px]">
             <img
               className="contrast-1"
@@ -41,7 +41,7 @@ const Portfolio = ({ ref }) => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col justify-center relative px-6 py-[9em] bg-zinc-300/20 h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+        <div className="flex flex-col justify-center relative px-6 py-[7.5em] bg-zinc-300/20 h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
           <div className="absolute flex flex-col items-center justify-center bg-white border-1 border-zinc-400 w-[55px] h-[55px] rounded-[50%] top-[-20px] right-[-20px]">
             <img
               className="contrast-1"
