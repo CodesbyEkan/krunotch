@@ -1,19 +1,13 @@
 import { Link, Outlet } from "react-router-dom";
-import { UserContext } from "./UserContext";
-import { useContext, useState } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
   const [isToggled, setIsToggled] = useState(false);
-
-  const { user } = useContext(UserContext);
 
   return (
     <>
       <nav className="fixed bg-white/30 backdrop-blur-sm w-full z-10">
         <div className="flex justify-end w-full px-[0.8]">
-          <Link className="text-[1.8rem] text-slate-300" to="/landingpage">
-            {user}
-          </Link>
           <div className="relative bg-zinc-300 my-6 mx-6 flex justify-center items-center p-[1.5em] w-[70px] h-[70px] rounded-[50%] overflow-hidden">
             <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
             <button
@@ -39,14 +33,10 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      {/* <div className="fixed h-screen inset-0 -z-1" /> */}
       <div
         className={`fixed w-full h-screen flex flex-col items-center z-50 bg-zinc-50/30 backdrop-blur-sm ${isToggled ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
         <div className="flex justify-end w-full">
-          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-            {user}
-          </h5>
           <div className="m-l-[1em] text-[2.1rem]">
             <div className="relative bg-slate-400 my-6 mx-6 flex justify-center items-center  w-[70px] h-[70px] rounded-[50%] overflow-hidden">
               <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
@@ -115,11 +105,6 @@ export default function Navbar() {
                 CONTACTS
               </Link>
             </li>
-            {/* <li class="nav-item">
-                  <Link class="nav-link" to="/login">
-                    LOG OUT
-                  </Link>
-                </li> */}
           </ul>
         </div>
       </div>

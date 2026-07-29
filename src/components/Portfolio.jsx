@@ -1,34 +1,65 @@
-// import { useContext } from "react";
-// import { UserContext } from "./UserContext";
+import reactIcon from "../assets/react.svg";
+import backendIcon from "../assets/backend.svg";
 
 const Portfolio = ({ ref }) => {
-  // const { user } = useContext(UserContext);
   return (
     <section
       ref={ref}
       className="relative w-full my-0 text-center flex flex-col justify-center items-center"
     >
-      <div className="absolute sticky top-8 z-[10] header my-8 text-5xl text-zinc-700 font-makira font-semibold">
+      <div className="absolute border-zinc-300 sticky top-8 z-[10] header my-8 text-[2.6rem] text-zinc-700 font-makira font-semibold">
         <h1>Services</h1>
       </div>
-      <div className="w-full flex flex-col gap-y-20 mt-20 px-12">
-        <div className="flex flex-col relative px-12 bg-zinc-300/20 h-70 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
-          <div className="absolute bg-zinc-800 w-[70px] h-[70px] rounded-[50%] top-[-20px] right-[-20px]"></div>
-          <h2 className="text-left text-zinc-800 text-3xl font-makira mt-18">
-            Let's talk<span className="block">about your project</span>
-          </h2>
-          <button className="w-fit text-left px-10 py-3 bg-zinc-800 rounded text-white text-xl mt-10 rounded-3xl uppercase cursor-pointer">
-            Connect
-          </button>
+      <div className="w-full flex flex-col gap-y-20 mt-2 px-12 ">
+        <div className="flex flex-col justify-center relative px-6 bg-[var(--bg2)] h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="flex flex-col gap-12">
+            <h2 className="text-left text-zinc-100 text-3xl font-makira">
+              Let's talk<span className="block">about your project</span>
+            </h2>
+            <button className="w-fit text-left px-10 py-3 bg-zinc-100 text-zinc-800 text-xl rounded-3xl uppercase cursor-pointer">
+              Connect
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col relative px-12 bg-zinc-300/20 h-70 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
-          <div className="absolute bg-zinc-800 w-[70px] h-[70px] rounded-[50%] top-[-20px] right-[-20px]"></div>
-          <h2 className="text-left text-zinc-800 text-3xl font-makira mt-18">
-            Frontend Developer
-          </h2>
+        <div className="flex flex-col justify-center relative px-6 py-12 bg-zinc-300/20 h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="absolute flex flex-col items-center justify-center bg-white border-1 border-zinc-400 bg-zinc-100 w-[60px] h-[60px] rounded-[50%] top-[-20px] right-[-20px]">
+            <img
+              className="contrast-1"
+              src={reactIcon}
+              alt="React icon"
+              width={50}
+            ></img>
+          </div>
+          <div className="flex flex-col items-start gap-8">
+            <h2 className="text-left text-zinc-800 text-3xl font-makira">
+              Frontend Dev.
+            </h2>
+            <p className="text-left">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Explicabo accusamus cumque voluptas ab veniam, doloremque rerum
+              ratione, sint iure tenetur.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col relative px-12 bg-zinc-300/20 h-70 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
-          <div className="absolute bg-zinc-800 w-[70px] h-[70px] rounded-[50%] top-[-20px] right-[-20px]"></div>
+        <div className="flex flex-col justify-center relative px-6 py-12 bg-zinc-300/20 h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="absolute flex flex-col items-center justify-center bg-white border-1 border-zinc-400 w-[60px] h-[60px] rounded-[50%] top-[-20px] right-[-20px]">
+            <img
+              className="contrast-1"
+              src={backendIcon}
+              alt="React icon"
+              width={42}
+            ></img>
+          </div>
+          <div className="flex flex-col gap-8">
+            <h2 className="text-left text-zinc-800 text-3xl font-makira">
+              Backend Engineer
+            </h2>
+            <p className="text-left">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Explicabo accusamus cumque voluptas ab veniam, doloremque rerum
+              ratione, sint iure tenetur.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,14 +1,7 @@
 import { useState } from "react";
 
 const Sidebar = ({ sectionRefs }) => {
-  const [page, setPage] = useState(null);
-
-  //   const sectionRefs = {
-  //     home: HomeRef,
-  //     portfolio: PortfolioRef,
-  //     project: ProjectRef,
-  //     contact: ContactRef,
-  //   };
+  const [page, setPage] = useState("home");
 
   const handleClick = (e) => {
     const myPage = e.currentTarget.dataset.page;
@@ -18,7 +11,6 @@ const Sidebar = ({ sectionRefs }) => {
   };
 
   const scrollToSection = (ref) => {
-    // console.log(ref.current);
     if (!ref?.current) return;
 
     const yOffset = 0;
@@ -58,12 +50,6 @@ const Sidebar = ({ sectionRefs }) => {
         onClick={(e) => handleClick(e)}
         data-page="contact"
         data-active={page === "contact"}
-        className="relative w-[18px] h-[18px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:z-[-1]"
-      ></div>
-      <div
-        onClick={(e) => handleClick(e)}
-        data-page="skills"
-        data-active={page === "skills"}
         className="relative w-[18px] h-[18px] flex justify-center items-center rounded-[30px] bg-zinc-600/55 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-600/75 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:z-[-1]"
       ></div>
     </div>
