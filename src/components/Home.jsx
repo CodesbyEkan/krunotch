@@ -17,12 +17,12 @@ const Home = ({ ref }) => {
         <p className="text-[1.2rem] text-zinc-600 font-light tracking-wide uppercase">
           &lt; Fullstack Engineer &#47;&gt;
         </p>
-        <p className="w-90 mt-2 text-[1.05rem] tracking-wide text-center text-zinc-500">
+        <p className="w-[20em] mt-2 text-[1.05rem] tracking-wide text-center text-zinc-500">
           I build optimized, reliable, scalable web services. Converting ideas
           into clean UI, with real results using tools such as React, NextJS,
           Node.js, Express, Tailwind.
         </p>
-        <div className="cta-box relative mt-[2em] flex justify-between items-center w-5/8">
+        <div className="relative mt-[2em] flex justify-between items-center w-[19em]">
           <div className="explores">
             <button className="py-[0.3em] px-[1.6em]  bg-zinc-800 text-zinc-100 text-lg shadow-lg rounded-lg font-bold cursor-pointer hover:bg-zinc-700">
               <Link to="/portfolio">Explore</Link>
