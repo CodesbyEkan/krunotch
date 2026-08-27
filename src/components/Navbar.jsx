@@ -6,19 +6,19 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed bg-white/30 backdrop-blur-sm w-full z-10">
+      <nav className="fixed bg-white/30 backdrop-blur-sm w-full h-40 z-10">
         <div className="flex justify-end w-full px-[0.8]">
-          <div className="relative bg-zinc-300 my-6 mx-6 flex justify-center items-center p-[1.5em] w-[70px] h-[70px] rounded-[50%] overflow-hidden">
+          <div className="relative bg-zinc-300 my-6 mx-6 flex justify-center items-center p-[1.5em] w-[65px] h-[65px] rounded-[50%] overflow-hidden">
             <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
             <button
-              className="absolute flex justify-center items-center w-[55px] h-[55px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
+              className="absolute flex justify-center items-center w-[50px] h-[50px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
               type="button"
               onClick={() => setIsToggled((prevToggle) => !prevToggle)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="50px"
-                width="50px"
+                height="45px"
+                width="45px"
                 viewBox="0 0 30 30"
                 className="fill-slate-800 stroke-[3] stroke-slate-300"
               >
