@@ -7,12 +7,12 @@ const Portfolio = ({ ref }) => {
       ref={ref}
       className="relative h-screen w-full overflow-y-auto my-0 flex flex-col"
     >
-      <div className="absolute sticky z-[10] top-0 flex justify-center">
-        <h1 className="h-40 pt-20 text-[2.4rem] text-zinc-700 font-makira font-semibold">
+      <div className="flex justify-center">
+        <h1 className="sticky z-30 pt-25 text-[2.4rem] text-zinc-700 font-makira font-semibold">
           Services.
         </h1>
       </div>
-      <div className="w-full flex flex-col gap-y-12 my-0 pt-[4em] pb-10 px-12 ">
+      <div className="w-full flex flex-col gap-y-12 pt-10 pb-10 px-12 ">
         <div className="flex flex-col justify-center relative px-6 bg-[var(--bg2)] h-62 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
           <div className="flex flex-col gap-12">
             <h2 className="text-left text-zinc-100 text-[1.75rem] font-makira">

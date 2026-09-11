@@ -2,13 +2,15 @@ const Project = ({ ref }) => {
   return (
     <section
       ref={ref}
-      className="relative h-screen w-full my-0 overflow-y-auto text-center flex flex-col justify-center items-center"
+      className="relative h-screen w-full bg-zinc-900 z-30 overflow-y-auto text-center flex flex-col items-center"
     >
-      <div className="absolute sticky flex flex-col gap-4 items-center top-8 text-[2.4rem] text-zinc-700 font-makira font-semibold text-center z-[11]">
-        <h1>Projects.</h1>
-        <div className="w-80 h-12 border-1 rounded-full"></div>
+      <div className="flex flex-col w-full pt-25 pb-6 border-b-1 border-zinc-300/50 gap-y-4 items-center">
+        <div className="sticky z-20 flex items-center text-[2.4rem] text-zinc-700 font-makira">
+          Projects
+        </div>
+        <div className="w-65 h-11 ring-1 ring-zinc-400 rounded-full"></div>
       </div>
-      <div className="w-full flex flex-col items-center justify-center gap-y-10 pl-8 pr-12 pt-[32em]">
+      <div className="w-full flex flex-col items-center gap-y-10 pl-8 pr-12 py-10">
         <div className="relative flex w-full h-auto">
           <div className="w-1/6">
             <p className="py-2 text-3xl text-zinc-600 font-makira rotate-90">
