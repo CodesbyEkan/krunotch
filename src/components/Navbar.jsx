@@ -6,10 +6,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed bg-white/30 backdrop-blur-sm w-full h-40 z-10">
-        <div className="flex justify-end w-full px-[0.8]">
-          <div className="relative bg-zinc-300 my-6 mx-6 flex justify-center items-center p-[1.5em] w-[65px] h-[65px] rounded-[50%] overflow-hidden">
-            <span className=" absolute w-full h-full bg-zinc-400 animate-pulse [animation-duration-800ms]"></span>
+      <nav className="fixed bg-white/30 backdrop-blur-sm w-full h-40 z-20">
+        <div className="flex justify-end px-[0.8] bg-transparent">
+          <div className="relative my-6 mx-6 flex justify-center items-center p-[1.5em] w-[65px] h-[65px] rounded-[50%] overflow-hidden z-50">
+            <span className=" absolute w-full h-full bg-zinc-300/20 animate-ping"></span>
             <button
               className="absolute flex justify-center items-center w-[50px] h-[50px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
               type="button"
@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
       </nav>
       <div
-        className={`fixed w-full h-screen flex flex-col items-center z-50 bg-zinc-50/30 backdrop-blur-sm ${isToggled ? "opacity-100 visible" : "opacity-0 invisible"}`}
+        className={`fixed w-full h-screen flex flex-col items-center z-50 bg-red-500/10 overscroll-contain backdrop-blur-sm ${isToggled ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
         <div className="flex justify-end w-full">
           <div className="m-l-[1em] text-[2.1rem]">
