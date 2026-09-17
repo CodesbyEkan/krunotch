@@ -7,29 +7,19 @@ const Portfolio = ({ ref }) => {
       ref={ref}
       className="relative h-screen w-full overflow-y-auto my-0 flex flex-col"
     >
-      <div className="flex justify-center">
-        <h1 className="sticky z-30 pt-25 text-[2.4rem] text-zinc-700 font-makira font-semibold">
+      <div className="flex justify-center bg-zinc-100/10 sticky top-0 z-10 backdrop-blur-sm">
+        <h1 className="pt-25 text-[2.2rem] text-zinc-700 font-makira font-semibold">
           Services.
         </h1>
       </div>
       <div className="w-full flex flex-col gap-y-12 pt-10 pb-10 px-12 ">
-        <div className="flex flex-col justify-center relative px-6 bg-[var(--bg2)] h-62 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
-          <div className="flex flex-col gap-12">
-            <h2 className="text-left text-zinc-100 text-[1.75rem] font-makira">
-              Let's talk<span className="block">about your project</span>
-            </h2>
-            <button className="w-fit text-left px-10 py-3 bg-zinc-100 text-zinc-800 text-xl rounded-3xl uppercase cursor-pointer">
-              Connect
-            </button>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center relative px-6 py-[7.5em] bg-zinc-300/20 h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
-          <div className="absolute flex flex-col items-center justify-center bg-white border-1 border-zinc-400 bg-zinc-100 w-[55px] h-[55px] rounded-[50%] top-[-20px] right-[-20px]">
+        <div className="flex flex-col justify-center relative px-6 py-[7.5em] bg-zinc-300/20 h-52 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="absolute flex flex-col items-center justify-center bg-zinc-100 border border-zinc-400 w-13.75 h-13.75 rounded-[50%] -top-5 -right-5">
             <img
               className="contrast-1"
               src={reactIcon}
               alt="React icon"
-              width={45}
+              width={40}
             ></img>
           </div>
           <div className="flex flex-col items-start gap-8">
@@ -43,8 +33,8 @@ const Portfolio = ({ ref }) => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col justify-center relative px-6 py-[7.5em] bg-zinc-300/20 h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
-          <div className="absolute flex flex-col items-center justify-center bg-white border-1 border-zinc-400 w-[55px] h-[55px] rounded-[50%] top-[-20px] right-[-20px]">
+        <div className="flex flex-col justify-center relative px-6 py-[7.5em] bg-zinc-300/20 h-52 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="absolute flex flex-col items-center justify-center bg-white border border-zinc-400 w-13.75 h-13.75 rounded-[50%] -top-5 -right-5">
             <img
               className="contrast-1"
               src={backendIcon}
@@ -61,6 +51,16 @@ const Portfolio = ({ ref }) => {
               Explicabo accusamus cumque voluptas ab veniam, doloremque rerum
               ratione, sint iure tenetur.
             </p>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center relative px-6 bg-(--bg2) h-62 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+          <div className="flex flex-col gap-12">
+            <h2 className="text-left text-zinc-100 text-[1.75rem] font-makira">
+              Let's talk<span className="block">about your project</span>
+            </h2>
+            <button className="w-fit text-left px-10 py-3 bg-zinc-100 text-zinc-800 text-xl rounded-3xl uppercase cursor-pointer">
+              Connect
+            </button>
           </div>
         </div>
       </div>

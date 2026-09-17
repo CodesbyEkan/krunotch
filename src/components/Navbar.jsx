@@ -6,12 +6,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed bg-white/30 backdrop-blur-sm w-full h-40 z-20">
+      <nav className="fixed bg-transparent w-full h-40 z-20">
         <div className="flex justify-end px-[0.8] bg-transparent">
           <div className="relative my-6 mx-6 flex justify-center items-center p-[1.5em] w-[65px] h-[65px] rounded-[50%] overflow-hidden z-50">
             <span className=" absolute w-full h-full bg-zinc-300/20 animate-ping"></span>
             <button
-              className="absolute flex justify-center items-center w-[50px] h-[50px] border-none rounded-[50%] bg-zinc-700 cursor-pointer animate-spin"
+              className="absolute flex justify-center items-center w-[50px] h-[50px] border-none rounded-[50%] bg-zinc-700 cursor-pointer -rotate-35"
               type="button"
               onClick={() => setIsToggled((prevToggle) => !prevToggle)}
             >

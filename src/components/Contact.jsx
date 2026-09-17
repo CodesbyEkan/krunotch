@@ -2,16 +2,16 @@ const Contact = ({ ref }) => {
   return (
     <section
       ref={ref}
-      className="relative w-full my-0 text-center flex flex-col items-center h-screen"
+      className="relative w-full h-screen my-0 text-center flex flex-col items-center"
     >
-      <div className="sticky z-60 flex justify-center">
-        <div className="h-40 pt-20 text-[2.4rem] text-zinc-700 font-makira font-semibold">
+      <div className="sticky z-20 flex justify-center">
+        <div className="h-40 pt-20 text-[2.2rem] text-zinc-700 font-makira font-semibold">
           Contact.
         </div>
       </div>
       {/* <div className="h-screen">...</div> */}
-      <div className="w-full flex flex-col gap-y-20 mt-2 px-12 ">
-        <div className="flex flex-col justify-center relative px-6 bg-[var(--bg2)] h-52 border-1 border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+      <div className="w-full h-full flex flex-col justify-between gap-y-20 mt-2 px-12 ">
+        <div className="flex flex-col justify-center relative px-6 bg-(--bg2) h-52 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
           <div className="flex flex-col gap-12">
             <h2 className="text-left text-zinc-100 text-[1.75rem] font-makira">
               Let's talk<span className="block">about your project</span>
@@ -21,6 +21,9 @@ const Contact = ({ ref }) => {
             </button>
           </div>
         </div>
+        <footer className="border-t border-t-zinc-700/20 h-20 w-full flex justify-center items-center">
+          <p className="text-zinc-700">2026</p>
+        </footer>
       </div>
     </section>
   );
