@@ -2,14 +2,17 @@ import { Link } from "react-router-dom";
 
 const Home = ({ ref }) => {
   return (
-    <section ref={ref} className="h-screen pt-34 z-1 w-full animate-swipe">
+    <section
+      ref={ref}
+      className="bg-zinc-100 h-screen pt-34 z-1 w-full animate-swipe"
+    >
       <div className="anim-container flex justify-center items-center">
-        <div className="relative my-[3em] mx-auto h-[288px] w-[288px] border-2 border-dotted border-zinc-500 rounded-full p-[4em] animate-spin"></div>
-        <div className="profile-pic bg-[url('./assets/userpics.jpg')] bg-cover bg-center absolute h-[260px] w-[260px] rounded-full tracking-widest shadow-xl shadow-zinc-500/50"></div>
+        <div className="relative my-[3em] mx-auto h-72 w-72 border-2 border-dotted border-zinc-500 rounded-full p-[4em] animate-spin"></div>
+        <div className="profile-pic bg-[url('./assets/userpics.jpg')] bg-cover bg-center absolute h-65 w-65 rounded-full tracking-widest shadow-xl shadow-zinc-500/50"></div>
       </div>
       <div className="relative flex flex-col justify-center items-center">
         <div className="flex">
-          <h1 className="relative my-[0] mx-auto w-[0] overflow-hidden whitespace-nowrap text-[1.9rem] text-zinc-700 font-makira font-bold uppercase border-r-6 border-zinc-800 text-shadow-lg leading-snug animate-typewriter hover:animate-typewriter cursor-pointer">
+          <h1 className="relative my-0 mx-auto w-0 overflow-hidden whitespace-nowrap text-[1.9rem] text-zinc-700 font-makira font-bold uppercase border-r-6 border-zinc-800 text-shadow-lg leading-snug animate-typewriter hover:animate-typewriter cursor-pointer">
             <span className="font-light">&#123;</span> Ekanem Victor
             <span className="font-light"> &#125;</span>
           </h1>
