@@ -36,25 +36,25 @@ const Sidebar = ({ sectionRefs }) => {
         onClick={(e) => handleClick(e)}
         data-page="home"
         data-active={page === "home"}
-        className="relative w-[11px] h-[11px] flex justify-center items-center rounded-[30px] bg-zinc-800 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-900/70 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:z-[-1]"
+        className="relative w-2 h-2 flex justify-center items-center rounded-[30px] bg-zinc-500/80 cursor-pointer data-[active=true]:h-10 data-[active=true]:bg-zinc-600 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:-z-1"
       ></div>
       <div
         onClick={(e) => handleClick(e)}
         data-page="portfolio"
         data-active={page === "portfolio"}
-        className="relative w-[11px] h-[11px] flex justify-center items-center rounded-[30px] bg-zinc-800 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-900/80 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:z-[-1]"
+        className="relative w-2 h-2 flex justify-center items-center rounded-[30px] bg-zinc-500/80 cursor-pointer data-[active=true]:h-10 data-[active=true]:bg-zinc-600 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:-z-1"
       ></div>
       <div
         onClick={(e) => handleClick(e)}
         data-page="project"
         data-active={page === "project"}
-        className="relative w-[11px] h-[11px] flex justify-center items-center rounded-[30px] bg-zinc-800 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-900/70 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:z-[-1]"
+        className="relative w-2 h-2 flex justify-center items-center rounded-[30px] bg-zinc-500/80 cursor-pointer data-[active=true]:h-10 data-[active=true]:bg-zinc-600 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:-z-1"
       ></div>
       <div
         onClick={(e) => handleClick(e)}
         data-page="contact"
         data-active={page === "contact"}
-        className="relative w-[11px] h-[11px] flex justify-center items-center rounded-[30px] bg-zinc-800 cursor-pointer data-[active=true]:h-[40px] data-[active=true]:bg-zinc-900/70 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:z-[-1]"
+        className="relative w-2 h-2 flex justify-center items-center rounded-[30px] bg-zinc-500/80 cursor-pointer data-[active=true]:h-10 data-[active=true]:bg-zinc-600 before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:scale-100 before:rounded-[30px] before:-z-1"
       ></div>
     </div>
   );

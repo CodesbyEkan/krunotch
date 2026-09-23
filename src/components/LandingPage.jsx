@@ -21,7 +21,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="relative overflow-hidden overscroll-contain h-full">
+    <div className="relative overflow-hidden overscroll-contain h-full bg-zinc-950">
       <Sidebar sectionRefs={sectionRefs} />
       <Home ref={HomeRef} />
       <Portfolio ref={PortfolioRef} />
