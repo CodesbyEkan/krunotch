@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { handleClick } from "../utils/handleClick";
 
-const Sidebar = ({ sectionRefs }) => {
-  const [page, setPage] = useState("home");
+const Sidebar = ({ sectionRefs, page, setPage }) => {
+  // const [page, setPage] = useState("home");
 
   // const handleClick = (e) => {
   //   const pageClicked = e.currentTarget.dataset.page;

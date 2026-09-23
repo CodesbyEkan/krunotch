@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import Portfolio from "./Portfolio";
 import Project from "./Project";
@@ -8,6 +8,8 @@ import Sidebar from "./Sidebar";
 import Home from "./Home";
 
 export default function LandingPage() {
+  const [page, setPage] = useState("home");
+
   const HomeRef = useRef(null);
   const PortfolioRef = useRef(null);
   const ProjectRef = useRef(null);
@@ -22,12 +24,16 @@ export default function LandingPage() {
 
   return (
     <div className="relative overflow-hidden overscroll-contain h-full bg-zinc-950">
-      <Sidebar sectionRefs={sectionRefs} />
+      <Sidebar sectionRefs={sectionRefs} page={page} setPage={setPage} />
       <Home ref={HomeRef} />
-      <Portfolio ref={PortfolioRef} />
+      <Portfolio
+        ref={PortfolioRef}
+        contactRef={sectionRefs}
+        setPage={setPage}
+      />
       <Project ref={ProjectRef} />
       <Contact ref={ContactRef} />
-      <div>{/* <Home ref={HomeRef} /> */}</div>
+      {/* <div><Home ref={HomeRef} /></div> */}
     </div>
   );
 }

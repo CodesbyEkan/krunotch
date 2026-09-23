@@ -1,7 +1,8 @@
 import reactIcon from "../assets/react.svg";
 import backendIcon from "../assets/backend.svg";
+import { handleClick } from "../utils/handleClick";
 
-const Portfolio = ({ ref }) => {
+const Portfolio = ({ ref, contactRef, setPage }) => {
   return (
     <section
       ref={ref}
@@ -58,7 +59,11 @@ const Portfolio = ({ ref }) => {
             <h2 className="text-left text-zinc-100 text-[1.75rem] font-makira">
               Let's talk<span className="block">about your project</span>
             </h2>
-            <button className="w-fit text-left px-6 py-2 bg-zinc-100 text-zinc-800 text-lg font-medium rounded-3xl uppercase cursor-pointer">
+            <button
+              data-page="contact"
+              onClick={(e) => handleClick(e, contactRef, setPage)}
+              className="w-fit text-left px-6 py-2 bg-zinc-100 text-zinc-800 text-lg font-medium rounded-3xl uppercase cursor-pointer"
+            >
               Connect
             </button>
           </div>
