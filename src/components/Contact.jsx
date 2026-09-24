@@ -2,7 +2,7 @@ const Contact = ({ ref }) => {
   return (
     <section
       ref={ref}
-      className="bg-zinc-200 relative w-full h-screen my-0 text-center flex flex-col items-center"
+      className="bg-zinc-200 relative w-full h-dvh my-0 text-center flex flex-col items-center"
     >
       <div className="sticky z-20 flex justify-center">
         <div className="h-40 pt-20 text-[2.2rem] text-zinc-700 font-makira font-semibold">

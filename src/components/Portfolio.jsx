@@ -6,10 +6,10 @@ const Portfolio = ({ ref, contactRef, setPage }) => {
   return (
     <section
       ref={ref}
-      className="relative h-screen w-full bg-zinc-100 overflow-y-auto my-0 flex flex-col"
+      className="relative h-dvh w-full bg-zinc-100 overflow-y-auto my-0 flex flex-col"
     >
       <div className="flex justify-center bg-zinc-100/10 sticky top-0 z-10 backdrop-blur-sm">
-        <h1 className="pt-25 text-[2.2rem] text-zinc-700 font-makira font-semibold">
+        <h1 className="pt-25 text-[2.2rem] text-zinc-70eenont-makira font-semibold">
           Services
         </h1>
       </div>

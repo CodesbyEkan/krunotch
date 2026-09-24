@@ -4,7 +4,7 @@ const Project = ({ ref }) => {
   return (
     <section
       ref={ref}
-      className="relative h-screen w-full bg-taupe-800/60 overflow-y-auto text-center flex flex-col items-center"
+      className="relative h-dvh w-full bg-taupe-800/60 overflow-y-auto text-center flex flex-col items-center"
     >
       <div className="flex flex-col bg-taupe-900/90 backdrop-blur-2xl sticky top-0 z-10 w-full pt-25 pb-6 border-b border-zinc-300/50 gap-y-4 items-center">
         <div className="flex items-center text-[2.2rem] text-zinc-200 font-makira">

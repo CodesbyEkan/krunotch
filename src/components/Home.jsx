@@ -5,7 +5,7 @@ const Home = ({ ref, contactRef, setPage }) => {
   return (
     <section
       ref={ref}
-      className="flex flex-col items-center justify-center bg-zinc-100 h-screen z-1 w-full animate-swipe"
+      className="flex flex-col items-center justify-center bg-zinc-100 h-dvh z-1 w-full animate-swipe"
     >
       <div className="anim-container flex justify-center items-center">
         <div className="relative my-[3em] mx-auto h-72 w-72 border-2 border-dotted border-zinc-500 rounded-full p-[4em] animate-spin"></div>
