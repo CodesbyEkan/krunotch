@@ -5,6 +5,7 @@ import Portfolio from "./Portfolio";
 import Project from "./Project";
 import Contact from "./Contact";
 import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
 import Home from "./Home";
 
 export default function LandingPage() {
@@ -24,8 +25,9 @@ export default function LandingPage() {
 
   return (
     <div className="relative overflow-hidden overscroll-contain h-full bg-zinc-950">
+      <Navbar contactRef={sectionRefs} setPage={setPage}/>
       <Sidebar sectionRefs={sectionRefs} page={page} setPage={setPage} />
-      <Home ref={HomeRef} />
+      <Home ref={HomeRef} contactRef={sectionRefs} setPage={setPage} />
       <Portfolio
         ref={PortfolioRef}
         contactRef={sectionRefs}

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { handleClick } from "../utils/handleClick";
 
-const Home = ({ ref }) => {
+const Home = ({ ref, contactRef, setPage }) => {
   return (
     <section
       ref={ref}
@@ -27,13 +28,23 @@ const Home = ({ ref }) => {
         </p>
         <div className="relative mt-[2em] flex justify-between items-center w-[19em]">
           <div className="explores">
-            <button className="py-[0.3em] px-[1.6em]  bg-zinc-800 text-zinc-100 text-lg shadow-lg rounded-lg font-bold cursor-pointer hover:bg-zinc-700">
-              <Link to="/portfolio">Explore</Link>
+            <button
+              data-page="portfolio"
+              onClick={(e) => handleClick(e, contactRef, setPage)}
+              className="py-[0.3em] px-[1.6em]  bg-zinc-800 text-zinc-100 text-lg shadow-lg rounded-lg font-bold cursor-pointer hover:bg-zinc-700"
+            >
+              Explore
+              {/* <Link to="/portfolio">Explore</Link> */}
             </button>
           </div>
           <div className="contact">
-            <button className="explore py-[0.3em] px-[1.6em]  bg-zinc-800 text-zinc-100 text-lg shadow-lg  rounded-lg font-bold cursor-pointer hover:bg-zinc-700">
-              <Link to="/contact">Contact</Link>
+            <button
+              data-page="contact"
+              onClick={(e) => handleClick(e, contactRef, setPage)}
+              className="explore py-[0.3em] px-[1.6em]  bg-zinc-800 text-zinc-100 text-lg shadow-lg  rounded-lg font-bold cursor-pointer hover:bg-zinc-700"
+            >
+              Contact
+              {/* <Link to="/contact">Contact</Link> */}
             </button>
           </div>
         </div>

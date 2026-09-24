@@ -32,7 +32,7 @@ const Sidebar = ({ sectionRefs, page, setPage }) => {
   // }, []);
 
   return (
-    <div className="bg-transparent fixed top-100 w-auto ml-4 flex flex-col justify-center items-center gap-y-5 visible z-40">
+    <div className="bg-transparent fixed top-100 w-auto ml-4 flex flex-col justify-center items-center gap-y-5 visible z-30">
       <div
         onClick={(e) => handleClick(e, sectionRefs, setPage)}
         data-page="home"
