@@ -9,11 +9,11 @@ const Portfolio = ({ ref }) => {
     >
       <div className="flex justify-center bg-zinc-100/10 sticky top-0 z-10 backdrop-blur-sm">
         <h1 className="pt-25 text-[2.2rem] text-zinc-700 font-makira font-semibold">
-          Services.
+          Services
         </h1>
       </div>
-      <div className="w-full flex flex-col gap-y-12 pt-10 pb-10 px-12 ">
-        <div className="flex flex-col justify-center relative px-6 py-[7.5em] bg-zinc-300/20 h-52 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+      <div className="w-full flex flex-col gap-y-12 pt-10 pb-10 px-13">
+        <div className="flex flex-col justify-center relative px-6 py-[8.5em] bg-zinc-300/20 h-52 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
           <div className="absolute flex flex-col items-center justify-center bg-zinc-100 border border-zinc-400 w-13.75 h-13.75 rounded-[50%] -top-5 -right-5">
             <img
               className="contrast-1"
@@ -22,18 +22,18 @@ const Portfolio = ({ ref }) => {
               width={40}
             ></img>
           </div>
-          <div className="flex flex-col items-start gap-8">
+          <div className="flex flex-col items-start gap-8 overflow-none">
             <h2 className="text-left text-zinc-800 text-3xl font-makira">
               Frontend Dev.
             </h2>
-            <p className="text-left w-60">
+            <p className="text-left">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Explicabo accusamus cumque voluptas ab veniam, doloremque rerum
               ratione, sint iure tenetur.
             </p>
           </div>
         </div>
-        <div className="flex flex-col justify-center relative px-6 py-[7.5em] bg-zinc-300/20 h-52 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
+        <div className="flex flex-col justify-center relative px-6 py-[8.5em] bg-zinc-300/20 h-52 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
           <div className="absolute flex flex-col items-center justify-center bg-white border border-zinc-400 w-13.75 h-13.75 rounded-[50%] -top-5 -right-5">
             <img
               className="contrast-1"
@@ -46,7 +46,7 @@ const Portfolio = ({ ref }) => {
             <h2 className="text-left text-zinc-800 text-3xl font-makira">
               Backend Eng.
             </h2>
-            <p className="text-left w-60">
+            <p className="text-left">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Explicabo accusamus cumque voluptas ab veniam, doloremque rerum
               ratione, sint iure tenetur.
@@ -54,11 +54,11 @@ const Portfolio = ({ ref }) => {
           </div>
         </div>
         <div className="flex flex-col justify-center relative px-6 bg-(--bg2) h-62 border border-zinc-300 rounded-2xl backdrop-blur-sm cursor-pointer hover:shadow-lg hover:scale-103">
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-8">
             <h2 className="text-left text-zinc-100 text-[1.75rem] font-makira">
               Let's talk<span className="block">about your project</span>
             </h2>
-            <button className="w-fit text-left px-10 py-3 bg-zinc-100 text-zinc-800 text-xl rounded-3xl uppercase cursor-pointer">
+            <button className="w-fit text-left px-6 py-2 bg-zinc-100 text-zinc-800 text-lg font-medium rounded-3xl uppercase cursor-pointer">
               Connect
             </button>
           </div>
